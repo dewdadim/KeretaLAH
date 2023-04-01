@@ -1,0 +1,186 @@
+<!--    
+
+▒█▄░▒█ █▀▀█ █▀▀▄ ░▀░ █▀▄▀█ 　 ▒█░▒█ █▀▀█ ░▀░ █▀▀█ ░▀░ 
+▒█▒█▒█ █▄▄█ █░░█ ▀█▀ █░▀░█ 　 ▒█▀▀█ █▄▄█ ▀█▀ █▄▄▀ ▀█▀ 
+▒█░░▀█ ▀░░▀ ▀▀▀░ ▀▀▀ ▀░░░▀ 　 ▒█░▒█ ▀░░▀ ▀▀▀ ▀░▀▀ ▀▀▀
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/src/style/book.css">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/src/style/navbar.css">
+    <link rel="stylesheet" href="/src/style/footer.css">
+
+    <!-- fonts & API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KeretaLAH - Book Car</title>
+    <link rel="icon" href="/src/Image/suv.png">
+
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="/public/index.html"><h1>KeretaLAH</h1></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/public/index.html">Home</a></li>
+                <li><a href="/src/page/book.html">Book Ride</a></li>
+                <li><a href="/src/page/carmodel.html">Car Model</a></li>
+                <li><a href="/src/page/contact.html">Contact</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="burger-menu__line"></div>
+                <div class="burger-menu__line"></div>
+                <div class="burger-menu__line"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="book-section">
+        <div class="container">
+            <div class="book-content">
+                <h1>Car Rent BookingLAH</h1>
+                <form action="book.php" class="book-form__personal-info">
+                    <h2>Personal Information</h2>
+                    <div class="book-form__2col">
+                        <span>
+                            <label for="first-name">
+                                First Name
+                                <b>*</b>
+                            </label>
+                            <input type="text" id="first-name" placeholder="Enter your first name">
+                        </span>
+                        <span>
+                            <label for="last-name">
+                                Last Name
+                                <b>*</b>
+                            </label>
+                            <input type="text" id="last-name" placeholder="Enter your last name">
+                        </span>
+                        <span>
+                            <label for="number">
+                                Phone Number
+                                <b>*</b>
+                            </label>
+                            <input type="text" id="number" placeholder="Enter your phone number">
+                        </span>
+                        <span>
+                            <label for="age">
+                                Age
+                                <b>*</b>
+                            </label>
+                            <input type="text" id="age" placeholder="Enter your age">
+                        </span>
+                    </div>
+                    <div class="book-form__1col">
+                        <span>
+                            <label for="email">
+                                Email
+                            </label>
+                            <input type="text" id="email" placeholder="Enter your email">
+                        </span>
+                        <span>
+                            <label for="address">
+                                Address
+                                <b>*</b>
+                            </label>
+                            <input type="text" id="address" placeholder="Enter your address">
+                        </span>
+                    </div>
+                    <div class="book-form__2col">
+                        <span>
+                            <label for="city">
+                                City
+                                <b>*</b>
+                            </label>
+                            <input type="text" id="city" placeholder="Enter your city">
+                        </span>
+                        <span>
+                            <label for="zip">
+                                Zip Code
+                                <b>*</b>
+                            </label>
+                            <input type="text" id="zip" placeholder="Enter your zip code">
+                        </span>
+                    </div>
+                </form>
+                <form action="book.php" class="book-form__booking-info">
+                    <h2>Booking Information</h2>
+                    <div class="book-form__1col">
+                        <span>
+                            <label for="carmodel">
+                                Car Model
+                                <b>*</b>
+                            </label>
+                            <select id="carmodel">
+                                <option>Select your car model</option>
+                                <option value="Honda CRV">Honda CRV</option>
+                                <option value="Perodua Axia">Perodua Axia</option>
+                                <option value="Toyota Vios">Toyota Vios</option>
+                                <option value="Proton X90">Proton X90</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="book-form__2col">
+                        <span>
+                            <label for="pickupLocation">
+                                Pick-Up Location
+                                <b>*</b>
+                            </label>
+                            <select id="pickupLocation">
+                                <option>Choose your pick-up location</option>
+                                <option value=""></option>
+                            </select>
+                        </span>
+                        <span>
+                            <label for="pickupDate">
+                                Pick-Up Date
+                                <b>*</b>
+                            </label>
+                            <input type="date" id="pickupDate">
+                        </span>
+                        <span>
+                            <label for="dropoffLocation">
+                                Drop-Off Location
+                                <b>*</b>
+                            </label>
+                            <select name="dropoffLocation">
+                                <option>Choose your drop-off location</option>
+                                <option value=""></option>
+                            </select>
+                        </span>
+                        <span>
+                            <label for="dropoffDate">
+                                Drop-Off Date
+                                <b>*</b>
+                            </label>
+                            <input type="date" id="dropoffDate">
+                        </span>
+                    </div>
+                    <span class="book-form__checkbox">
+                        <input type="checkbox">
+                        <p>By clicking this, I agree with all <a href="#">terms & conditions</a></p>
+                    </span>
+                </form>
+                <form>
+                    <button>Reserve Now</button>
+                </form>     
+            </div>
+        </div>
+    </div>
+
+</body>
+<footer>Made with ❤️ by Nadim Hairi</footer>
+</html>

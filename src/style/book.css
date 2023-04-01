@@ -1,0 +1,127 @@
+.book-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 4;
+}  
+
+.book-content {
+    width: 100%;
+    height: auto;
+    padding: 150px 10vw;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.book-content h1 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.book-content form h2{
+    font-size: large;
+    width: 100%;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 5px;
+    margin-bottom: 1.4rem;
+}
+
+.book-content form {
+    padding: 0 2rem;
+    margin-top: 4rem;
+}
+
+.book-form__1col, .book-form__2col {
+    display: grid;
+    grid-gap: 2rem;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.book-form__2col {
+    grid-template-columns: 1fr 1fr;
+}
+
+.book-form__checkbox {
+    align-items: center;
+    color: #565454;
+    display: flex;
+    font-size: 1.6rem;
+    gap: 1rem;
+    margin-left: 1.3rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.book-form__checkbox input {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.book-form__checkbox p a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.book-form__1col span, .book-form__2col span {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.book-form__1col span label, .book-form__2col span label {
+    font-weight: 500;
+    font-size: 1.6rem;
+    padding-left: 8px;
+}
+
+.book-form__1col span input, 
+.book-form__2col span input, 
+.book-form__1col span select, 
+.book-form__2col span select  
+{
+    background-color: #dbdbdb;
+    border: none;
+    color: #555;
+    font-size: 1.5rem;
+    outline: none;
+    padding: 14px 15px;
+    border-radius: 10px;
+}
+
+.book-form__1col span label b, .book-form__2col span label b {
+    color: orangered;
+}
+
+.book-content button {
+    display: flex;
+    gap: 2rem;
+    margin-top: 60px;
+    padding: 20px 40px;
+    border: none;
+    background-color: var(--yellow);
+    color: var(--white);
+    font-weight: bold;
+    font-size: large;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 300ms ease-out;
+}
+
+.book-content button:hover {
+    background-color: rgb(243, 181, 74);
+    box-shadow: 0 0 20px 5px rgba(243, 181, 74, 0.486);
+    transition: 300ms ease;
+}
+
+@media (max-width: 750px) {
+    .book-form__2col {
+        grid-template-columns: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .book-content {
+        padding-inline: 0;
+    }
+}
