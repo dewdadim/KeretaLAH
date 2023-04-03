@@ -70,7 +70,7 @@
 
     .nav-links a {
         color: var(--black);
-        font-size: 5em;
+        font-size: 4em;
     }
 
     .nav-links[data-visible = "true"] {
