@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="/src/style/navbar.css">
     <link rel="stylesheet" href="/src/style/footer.css">
 
+    <!-- script -->
+    <script src="/src/js/navbar.js" defer></script>
+
     <!-- fonts & API -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,21 +31,20 @@
     <title>KeretaLAH - Contact</title>
 </head>
 <body>
+    </head>
+<body>
     <header>
         <nav class="nav-bar">
             <div class="logo">
                 <a href="/index.html"><h1>KeretaLAH</h1></a>
             </div>
-            <ul class="nav-links">
+            <ul data-visible="false" class="nav-links">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/book.html">Book Ride</a></li>
                 <li><a href="/carmodel.html">Car Model</a></li>
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
-            <div class="burger-menu">
-                <div class="burger-menu__line"></div>
-                <div class="burger-menu__line"></div>
-                <div class="burger-menu__line"></div>
+            <div class="burger-menu" aria-expanded="false">
             </div>
         </nav>
     </header>
