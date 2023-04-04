@@ -46,6 +46,7 @@
     width: 3.5rem;
     height: 3rem;
     background-repeat: no-repeat;
+    z-index: 9999;
 }
 
 .burger-menu[aria-expended = "true"] {
@@ -80,7 +81,6 @@
 
     .burger-menu {
         display: flex;
-        z-index: 9999;
     }
 
 }
