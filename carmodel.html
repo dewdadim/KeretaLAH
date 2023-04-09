@@ -17,6 +17,7 @@
 
     <!-- script -->
     <script src="/src/js/navbar.js" defer></script>
+    <script src="/src/js/carmodel.js"></script>
 
     <!-- fonts & API -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +52,42 @@
         </nav>
     </header>
     <div class="carmodel-section">
-        
+        <div class="container">
+            <div class="carmodel-content">
+                <div class="carmodel-content__col2">
+                    <img src="/src/Image/honda_CRV.png" alt="">
+                </div>
+                <div class="carmodel-content__col3">
+                    <h2 id="carmodel__price"> 
+                        <span>RM20</span> 
+                        / hour
+                    </h2>
+                    <table>
+                        <tr>
+                            <th>Model</th>
+                            <td class="content">Perodua Axia</td>
+                        </tr>
+                        <tr>
+                            <th>Transmission</th>
+                            <td class="content">Auto</td>
+                        </tr>
+                        <tr>
+                            <th>Seat</th>
+                            <td class="content">6</td>
+                        </tr>
+                        <tr>
+                            <th>Year</th>
+                            <td class="content">2012</td>
+                        </tr>
+                        <tr>
+                            <th>Fuel</th>
+                            <td class="content">Gasoline</td>
+                        </tr>
+                    </table>
+                    <button class="book-button" onclick="document.location = '/book.html';">RESERVE NOW</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
