@@ -16,6 +16,7 @@
 
     <!-- script -->
     <script src="/src/js/navbar.js" defer></script>
+    <script src="/src/js/book_input_validation.js" defer></script>
 
     <!-- fonts & API -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,140 +54,153 @@
         <div class="container">
             <div class="book-content">
                 <h1>Car Rent BookingLAH</h1>
-                <form action="book.php" class="book-form__personal-info">
-                    <h2>Personal Information</h2>
-                    <div class="book-form__2col">
-                        <span>
-                            <label for="first-name">
-                                First Name
-                                <b>*</b>
-                            </label>
-                            <input type="text" id="first-name" placeholder="Enter your first name">
-                        </span>
-                        <span>
-                            <label for="last-name">
-                                Last Name
-                                <b>*</b>
-                            </label>
-                            <input type="text" id="last-name" placeholder="Enter your last name">
-                        </span>
-                        <span>
-                            <label for="number">
-                                Phone Number
-                                <b>*</b>
-                            </label>
-                            <input type="text" id="number" placeholder="Enter your phone number">
-                        </span>
-                        <span>
-                            <label for="age">
-                                Age
-                                <b>*</b>
-                            </label>
-                            <input type="text" id="age" placeholder="Enter your age">
+                <form id="form" action="/">
+                    <div class="book-form__personal-info">
+                        <h2>Personal Information</h2>
+                        <div class="book-form__2col">
+                            <span class="input-control">
+                                <label for="first-name">
+                                    First Name
+                                    <b>*</b>
+                                </label>
+                                <input type="text" id="first-name" placeholder="Enter your first name">
+                                <div class="error"></div>
+                            </span>
+                            <span class="input-control">
+                                <label for="last-name">
+                                    Last Name
+                                    <b>*</b>
+                                </label>
+                                <input type="text" id="last-name" placeholder="Enter your last name">
+                                <div class="error"></div>
+                            </span>
+                            <span class="input-control">
+                                <label for="phone-number">
+                                    Phone Number
+                                    <b>*</b>
+                                </label>
+                                <input type="text" id="phone-number" placeholder="Enter your phone number">
+                                <div class="error"></div>
+                            </span>
+                            <span class="input-control">
+                                <label for="age">
+                                    Age
+                                    <b>*</b>
+                                </label>
+                                <input type="number" id="age" placeholder="Enter your age">
+                                <div class="error"></div>
+                            </span>
+                        </div>
+                        <div class="book-form__1col">
+                            <span class="input-control">
+                                <label for="email">
+                                    Email
+                                </label>
+                                <input type="text" id="email" placeholder="Enter your email">
+                                <div class="error"></div>
+                            </span>
+                            <span class="input-control">
+                                <label for="address">
+                                    Address
+                                    <b>*</b>
+                                </label>
+                                <input type="text" id="address" placeholder="Enter your address">
+                                <div class="error"></div>
+                            </span>
+                        </div>
+                        <div class="book-form__2col">
+                            <span class="input-control">
+                                <label for="city">
+                                    City
+                                    <b>*</b>
+                                </label>
+                                <input type="text" id="city" placeholder="Enter your city">
+                                <div class="error"></div>
+                            </span>
+                            <span class="input-control">
+                                <label for="zip">
+                                    Zip Code
+                                    <b>*</b>
+                                </label>
+                                <input type="text" id="zip" placeholder="Enter your zip code">
+                                <div class="error"></div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="book-form__booking-info">
+                        <h2>Booking Information</h2>
+                        <div class="book-form__1col">
+                            <span class="input-control">
+                                <label for="carmodel">
+                                    Car Model
+                                    <b>*</b>
+                                </label>
+                                <select id="carmodel">
+                                    <option value="0">Select your car model</option>
+                                    <option value="Honda CRV">Honda CRV</option>
+                                    <option value="Perodua Axia">Perodua Axia</option>
+                                    <option value="Toyota Vios">Toyota Vios</option>
+                                    <option value="Proton X90">Proton X90</option>
+                                </select>
+                                <div class="error"></div>
+                            </span>
+                        </div>
+                        <div class="book-form__2col">
+                            <span class="input-control">
+                                <label for="pickupLocation">
+                                    Pick-Up Location
+                                    <b>*</b>
+                                </label>
+                                <select id="pickupLocation">
+                                    <option value="0">Choose your pick-up location</option>
+                                    <option value="Bangi">Bangi</option>
+                                    <option value="Kajang">Kajang</option>
+                                    <option value="Semenyih">Semenyih</option>
+                                    <option value="Cheras">Cheras</option>
+                                    <option value="Putrajaya">Putrajaya</option>
+                                    <option value="Cyberjayya">Cyberjayya</option>
+                                </select>
+                                <div class="error"></div>
+                            </span>
+                            <span class="input-control">
+                                <label for="pickupDate">
+                                    Pick-Up Date
+                                    <b>*</b>
+                                </label>
+                                <input type="date" id="pickupDate" value="0">
+                                <div class="error"></div>
+                            </span>
+                            <span class="input-control">
+                                <label for="dropoffLocation">
+                                    Drop-Off Location
+                                    <b>*</b>
+                                </label>
+                                <select id="dropoffLocation">
+                                    <option value="0">Choose your drop-off location</option>
+                                    <option value="Bangi">Bangi</option>
+                                    <option value="Kajang">Kajang</option>
+                                    <option value="Semenyih">Semenyih</option>
+                                    <option value="Cheras">Cheras</option>
+                                    <option value="Putrajaya">Putrajaya</option>
+                                    <option value="Cyberjayya">Cyberjayya</option>
+                                </select>
+                                <div class="error"></div>
+                            </span>
+                            <span class="input-control">
+                                <label for="dropoffDate">
+                                    Drop-Off Date
+                                    <b>*</b>
+                                </label>
+                                <input type="date" id="dropoffDate" value="0">
+                                <div class="error"></div>
+                            </span>
+                        </div>
+                        <span class="book-form__checkbox">
+                            <input type="checkbox">
+                            <p>By clicking this, I agree with all <a href="#">terms & conditions</a></p>
                         </span>
                     </div>
-                    <div class="book-form__1col">
-                        <span>
-                            <label for="email">
-                                Email
-                            </label>
-                            <input type="text" id="email" placeholder="Enter your email">
-                        </span>
-                        <span>
-                            <label for="address">
-                                Address
-                                <b>*</b>
-                            </label>
-                            <input type="text" id="address" placeholder="Enter your address">
-                        </span>
-                    </div>
-                    <div class="book-form__2col">
-                        <span>
-                            <label for="city">
-                                City
-                                <b>*</b>
-                            </label>
-                            <input type="text" id="city" placeholder="Enter your city">
-                        </span>
-                        <span>
-                            <label for="zip">
-                                Zip Code
-                                <b>*</b>
-                            </label>
-                            <input type="text" id="zip" placeholder="Enter your zip code">
-                        </span>
-                    </div>
-                </form>
-                <form action="book.php" class="book-form__booking-info">
-                    <h2>Booking Information</h2>
-                    <div class="book-form__1col">
-                        <span>
-                            <label for="carmodel">
-                                Car Model
-                                <b>*</b>
-                            </label>
-                            <select id="carmodel">
-                                <option>Select your car model</option>
-                                <option value="Honda CRV">Honda CRV</option>
-                                <option value="Perodua Axia">Perodua Axia</option>
-                                <option value="Toyota Vios">Toyota Vios</option>
-                                <option value="Proton X90">Proton X90</option>
-                            </select>
-                        </span>
-                    </div>
-                    <div class="book-form__2col">
-                        <span>
-                            <label for="pickupLocation">
-                                Pick-Up Location
-                                <b>*</b>
-                            </label>
-                            <select id="pickupLocation">
-                                <option>Choose your pick-up location</option>
-                                <option value="Bangi">Bangi</option>
-                                <option value="Kajang">Kajang</option>
-                                <option value="Semenyih">Semenyih</option>
-                                <option value="Cheras">Cheras</option>
-                                <option value="Putrajaya">Putrajaya</option>
-                                <option value="Cyberjayya">Cyberjayya</option>
-                            </select>
-                        </span>
-                        <span>
-                            <label for="pickupDate">
-                                Pick-Up Date
-                                <b>*</b>
-                            </label>
-                            <input type="date" id="pickupDate">
-                        </span>
-                        <span>
-                            <label for="dropoffLocation">
-                                Drop-Off Location
-                                <b>*</b>
-                            </label>
-                            <select name="dropoffLocation">
-                                <option>Choose your drop-off location</option>
-                                <option value="Bangi">Bangi</option>
-                                <option value="Kajang">Kajang</option>
-                                <option value="Semenyih">Semenyih</option>
-                                <option value="Cheras">Cheras</option>
-                                <option value="Putrajaya">Putrajaya</option>
-                                <option value="Cyberjayya">Cyberjayya</option>
-                            </select>
-                        </span>
-                        <span>
-                            <label for="dropoffDate">
-                                Drop-Off Date
-                                <b>*</b>
-                            </label>
-                            <input type="date" id="dropoffDate">
-                        </span>
-                    </div>
-                    <span class="book-form__checkbox">
-                        <input type="checkbox">
-                        <p>By clicking this, I agree with all <a href="#">terms & conditions</a></p>
-                    </span>
-                </form>
-                <form>
-                    <button>Reserve Now</button>
+                    <button type="submit">Reserve Now</button>
                 </form>     
             </div>
         </div>

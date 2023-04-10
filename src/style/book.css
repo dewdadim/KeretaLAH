@@ -26,6 +26,10 @@
     margin-bottom: 1.4rem;
 }
 
+.book-form__personal-info, .book-form__booking-info {
+    margin-top: 4rem;
+}
+
 .book-content form {
     padding: 0 2rem;
     margin-top: 4rem;
@@ -106,6 +110,19 @@
     border-radius: 10px;
     cursor: pointer;
     transition: 300ms ease-out;
+}
+
+.input-control.error input, .input-control.error select{
+    border: 1px solid;
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    font-weight: 400;
+    color: #ff3860;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    height: 13px;
 }
 
 .book-content button:hover {

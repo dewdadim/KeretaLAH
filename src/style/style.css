@@ -45,4 +45,15 @@ header {
     box-shadow: 0px 1px 10px 2px rgba(128, 128, 128, 0.616);
 }
 
+/* remove up down arrow for number type input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
 

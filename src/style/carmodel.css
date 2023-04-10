@@ -5,8 +5,35 @@
     height: 80em;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 5rem;
     flex-wrap: wrap;
+}
+
+.carmodel-content__col1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carmodel-content__col1 button {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 500;
+    border: none;
+    padding: 1.5rem 2.5rem;
+    border-radius: 10px;
+    background-color: rgb(224, 224, 224);
+    display: inline-block;
+    
+}
+
+.carmodel-content__choosen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
 }
 
 .carmodel-content__col2 {
@@ -29,7 +56,7 @@
 #carmodel__price, .book-button {
     font-size: 2.5rem;
     width: 28rem;
-    padding: 1.2rem 0;
+    padding: 1rem 0;
     text-align: center;
     border-radius: 10px;
     background-color: var(--yellow);
