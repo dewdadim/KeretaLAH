@@ -12,6 +12,7 @@ const pickupLocation = document.getElementById('pickupLocation');
 const pickupDate = document.getElementById('pickupDate');
 const dropoffLocation = document.getElementById('dropoffLocation');
 const dropoffDate = document.getElementById('dropoffDate');
+const accept = document.getElementById('accept');
 
 
 form.addEventListener('submit', e => {
@@ -93,7 +94,8 @@ const validateInputs = () => {
     const pickupLocationValue = pickupLocation.value;
     const pickupDateValue = pickupDate.value;
     const dropoffLocationValue = dropoffLocation.value;
-    const dropoffDateValue = dropoffDate.value.trim();
+    const dropoffDateValue = dropoffDate.value;
+    const acceptValue = accept.checked;
     
     //first name validation
     if(firstNameValue === '') {
@@ -188,5 +190,12 @@ const validateInputs = () => {
         setError(dropoffDate, 'Drop-off date is required');
     } else {
         setSuccess(dropoffDate);
+    }
+
+    //accept terms validation
+    if(!acceptValue) {
+        setError(accept, '');
+    } else {
+        setSuccess(accept);
     }
 };

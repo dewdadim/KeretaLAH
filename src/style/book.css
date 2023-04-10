@@ -112,7 +112,7 @@
     transition: 300ms ease-out;
 }
 
-.input-control.error input, .input-control.error select{
+.input-control.error input, .input-control.error select, .book-form__checkbox.input-control.error{
     border: 1px solid;
     border-color: #ff3860;
 }
