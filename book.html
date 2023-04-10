@@ -9,6 +9,7 @@
 <html lang="en">
 <head>
     <!-- stylesheet -->
+    <link rel="stylesheet" href="/src/style/checkmark_anim.css">
     <link rel="stylesheet" href="/src/style/book.css">
     <link rel="stylesheet" href="/src/style/style.css">
     <link rel="stylesheet" href="/src/style/navbar.css">
@@ -52,13 +53,29 @@
     </header>
     <div class="book-section">
         <div class="container">
+            <div class="success-popup" id="popup" style="display: none;">
+                <div class="success-checkmark">
+                    <div class="check-icon">
+                      <span class="icon-line line-tip"></span>
+                      <span class="icon-line line-long"></span>
+                      <div class="icon-circle"></div>
+                      <div class="icon-fix"></div>
+                    </div>
+                  </div>
+                <h1> Reserve Successful! </h1>
+                <div class="popup-message">
+                    <p>You have successfully reserve a car.</p>
+                    <p>We will send you notice through SMS.</p>
+                </div>
+                <button class="popup-button" onclick="document.location = '/index.html';">OK</button>
+            </div>
             <div class="book-content">
                 <h1>Car Rent BookingLAH</h1>
                 <form id="form" action="/">
                     <div class="book-form__personal-info">
                         <h2>Personal Information</h2>
                         <div class="book-form__2col">
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="first-name">
                                     First Name
                                     <b>*</b>
@@ -66,7 +83,7 @@
                                 <input type="text" id="first-name" placeholder="Enter your first name">
                                 <div class="error"></div>
                             </span>
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="last-name">
                                     Last Name
                                     <b>*</b>
@@ -74,7 +91,7 @@
                                 <input type="text" id="last-name" placeholder="Enter your last name">
                                 <div class="error"></div>
                             </span>
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="phone-number">
                                     Phone Number
                                     <b>*</b>
@@ -82,7 +99,7 @@
                                 <input type="text" id="phone-number" placeholder="Enter your phone number">
                                 <div class="error"></div>
                             </span>
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="age">
                                     Age
                                     <b>*</b>
@@ -92,14 +109,14 @@
                             </span>
                         </div>
                         <div class="book-form__1col">
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="email">
                                     Email
                                 </label>
                                 <input type="text" id="email" placeholder="Enter your email">
                                 <div class="error"></div>
                             </span>
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="address">
                                     Address
                                     <b>*</b>
@@ -109,7 +126,7 @@
                             </span>
                         </div>
                         <div class="book-form__2col">
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="city">
                                     City
                                     <b>*</b>
@@ -117,7 +134,7 @@
                                 <input type="text" id="city" placeholder="Enter your city">
                                 <div class="error"></div>
                             </span>
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="zip">
                                     Zip Code
                                     <b>*</b>
@@ -130,7 +147,7 @@
                     <div class="book-form__booking-info">
                         <h2>Booking Information</h2>
                         <div class="book-form__1col">
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="carmodel">
                                     Car Model
                                     <b>*</b>
@@ -146,7 +163,7 @@
                             </span>
                         </div>
                         <div class="book-form__2col">
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="pickupLocation">
                                     Pick-Up Location
                                     <b>*</b>
@@ -162,15 +179,15 @@
                                 </select>
                                 <div class="error"></div>
                             </span>
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="pickupDate">
                                     Pick-Up Date
                                     <b>*</b>
                                 </label>
-                                <input type="date" id="pickupDate" value="0">
+                                <input type="date" id="pickupDate">
                                 <div class="error"></div>
                             </span>
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="dropoffLocation">
                                     Drop-Off Location
                                     <b>*</b>
@@ -186,12 +203,12 @@
                                 </select>
                                 <div class="error"></div>
                             </span>
-                            <span class="input-control">
+                            <span class="input-control" id="form-input">
                                 <label for="dropoffDate">
                                     Drop-Off Date
                                     <b>*</b>
                                 </label>
-                                <input type="date" id="dropoffDate" value="0">
+                                <input type="date" id="dropoffDate">
                                 <div class="error"></div>
                             </span>
                         </div>

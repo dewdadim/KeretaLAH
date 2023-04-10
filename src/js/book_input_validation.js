@@ -14,13 +14,38 @@ const dropoffLocation = document.getElementById('dropoffLocation');
 const dropoffDate = document.getElementById('dropoffDate');
 
 
-
-
 form.addEventListener('submit', e => {
     e.preventDefault();
 
     validateInputs();
+    isValidForm();
 });
+
+const isValidForm = () => {
+    var inputs = document.querySelectorAll('#form-input');
+    let inputsStatus = [];
+
+    for(let i=0; i < inputs.length; i++){
+        var isSuccess = inputs[i].classList.contains('success');
+
+        if(isSuccess){
+            inputsStatus[i] = 'success';
+            // console.log(inputsStatus[i]);
+        } else {
+            inputsStatus[i] = 'error';
+            // console.log(inputsStatus[i]);
+        }
+    }
+
+    if (allAreEqual(inputsStatus) && inputsStatus.includes('success')){
+        console.log("It is valid form");
+        document.getElementById('popup').style.display = "block";
+    } else {
+        console.log("It its not validdd");
+    }
+}
+
+// const displaySuccess = (inputsStatus)
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
@@ -43,6 +68,16 @@ const setSuccess = element => {
 const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+}
+
+function allAreEqual(array) {
+    const result = array.every(element => {
+      if (element === array[0]) {
+        return true;
+      }
+    });
+  
+    return result;
 }
 
 const validateInputs = () => {
@@ -135,21 +170,21 @@ const validateInputs = () => {
     }
 
     //pick-up date validation
-    if(pickupDateValue === '0') {
+    if(pickupDateValue === '') {
         setError(pickupDate, 'Pick-up date is required');
     } else {
         setSuccess(pickupDate);
     }
 
     //drop-off loation validation
-    if(dropoffLocationValue=== '0') {
+    if(dropoffLocationValue === '0') {
         setError(dropoffLocation, 'Drop-off location is required');
     } else {
         setSuccess(dropoffLocation);
     }
 
     //drop-off date validation
-    if(dropoffDateValue === '0') {
+    if(dropoffDateValue === '') {
         setError(dropoffDate, 'Drop-off date is required');
     } else {
         setSuccess(dropoffDate);
