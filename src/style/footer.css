@@ -8,4 +8,24 @@ footer {
     padding: 40px;
     background-color: var(--black);
     font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    color: var(--white); 
+    font-size: 2rem;
+}
+
+.socials {
+    display: flex;
+    width: 20rem;
+    justify-content: space-around;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.socials a img { 
+    width: 24px;
 }
