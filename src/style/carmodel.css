@@ -19,8 +19,8 @@
 
 .carmodel-content__text {
     position: relative;
-    top: 10rem;
-    font-size: 7rem;
+    top: 12rem;
+    font-size: 5rem;
     text-align: center;
 }
 
@@ -51,6 +51,7 @@
 .carmodel-content__car-image{
     margin-top: 6rem;
     width: 60rem;
+    height: 40rem;
 }
 
 .carmodel-content__car-image img{
