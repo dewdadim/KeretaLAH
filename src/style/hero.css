@@ -72,12 +72,6 @@
     z-index: 3;
 }
 
-/* @media screen and (width <= 1580px) {
-    .container {
-        margin: 0 5rem !important;
-    }
-} */
-
 @media (max-width: 800px) {
     .hero-content {
         justify-content: center;
