@@ -1,29 +1,43 @@
-.carmodel-content__section {
-    height: auto;
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 200em;
+    z-index: 4;
 }
 
 .carmodel-content {
-    margin-top: 15rem;
+    width: 100%;
 }
 
-.carmodel-content h1 {
+.carmodel-content__list {
+    margin-top: 3rem;
+    padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.carmodel-content__text {
+    position: relative;
+    top: 10rem;
     font-size: 7rem;
     text-align: center;
 }
 
 .carmodel-content__item {
     margin-top: 20rem;;
+    position: relative;
 }
 
 .carmodel-content__item h1{
     font-size: 5rem;
+    font-weight: 100;
     text-align: center;
 }
 
 .carmodel-content__car {
     display: flex;
     width: 100%;
-    height: 40rem;
     justify-content: center;
     align-items: center;
     gap: 5rem;
