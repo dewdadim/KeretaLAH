@@ -144,7 +144,7 @@
     width: 60rem;
     height: 43rem;
     border-radius: 10px;
-    top: 45rem;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
