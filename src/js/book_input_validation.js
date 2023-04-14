@@ -14,15 +14,12 @@ const dropoffLocation = document.getElementById('dropoffLocation');
 const dropoffDate = document.getElementById('dropoffDate');
 const accept = document.getElementById('accept');
 
-let elementError = document.querySelector('.error')
-
 
 form.addEventListener('submit', e => {
     e.preventDefault();
 
     validateInputs();
     isValidForm();
-    elementError.scrollIntoView({ behavior: "smooth", block: "start"});
 });
 
 const isValidForm = () => {
@@ -49,7 +46,6 @@ const isValidForm = () => {
     }
 }
 
-// const displaySuccess = (inputsStatus)
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
