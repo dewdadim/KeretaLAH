@@ -8,4 +8,4 @@ KeretaLAH is a platform for users to rent a car. Users may find rental cars at t
 
 <h2>Page Preview</h2>
 
-<img href="/src/Image/Landing-page.JPG">
+<img src="/src/Image/Landing-page.JPG">
